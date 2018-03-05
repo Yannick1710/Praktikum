@@ -29,54 +29,36 @@
   <br />
   <br />
   <div id="app">
-      {{ heroes }}
-
     <div id="tabelle" class="tabelle">
       <div class="container">
         <div class="row">
           <div class="three columns">
-            <span class="fett">Name</span>
+            <p class="fett">Name</p>
           </div>
           <div class="three columns">
-            <span class="fett">Alter</span>
+            <p class="fett">Alter</p>
           </div>
           <div class="three columns">
-            <span class="fett">Superkraft</span>
+            <p class="fett">Superkraft</p>
           </div>
           <div class="three columns">
-            <span class="fett">Film</span>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="three columns">
-            <span class="row1">Platzhalter</span>
-          </div>
-          <div class="three columns">
-            <span class="row1">Platzhalter</span>
-          </div>
-          <div class="three columns">
-            <span class="row1">Platzhalter</span>
-          </div>
-          <div class="three columns">
-            <span class="row1">Platzhalter</span>
+            <p class="fett">Film</p>
           </div>
         </div>
       </div>
       <div class="container">
-        <div class="row">
+        <div class="row" v-for="hero in heroes">
           <div class="three columns">
-            <span class="row2">Platzhalter</span>
+            <p class="row1-1" id="row1-1">{{ hero.name }}</p>
           </div>
           <div class="three columns">
-            <span class="row2">Platzhalter</span>
+            <p class="row1-2">{{ hero.age }}</p>
           </div>
           <div class="three columns">
-            <span class="row2">Platzhalter</span>
+            <p class="row1-3">{{ hero.strength }}</p>
           </div>
           <div class="three columns">
-            <span class="row2">Platzhalter</span>
+            <p class="row1-4">{{ hero.film }}</p>
           </div>
         </div>
       </div>
@@ -101,5 +83,8 @@
   <!-- VueFire -->
   <script src="https://unpkg.com/vuefire/dist/vuefire.js"></script>
   <script src="script.js"></script>
+  <script>
+    document.getElementById("row1-1").innerHTML = ;
+  </script>
 </body>
 </html
