@@ -11,7 +11,29 @@ body{
   background-color: rgba(255,255,255,30);
   width: 100%
 }
+.helden{
+  width: 900px;
 
+  height: 418px;
+  background: url("https://s7e5a.scene7.com/is/image/maskworld/categories/superhelden--mw-cat-h-369-de_rwd.jpg");
+  background-size: cover;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+
+
+}
+
+a{
+  text-decoration: none;
+  color: rgb(30,30,30)
+}
+a:hover{
+  color: rgb(100,100,100)
+}
+a:active{
+  color: black;
+}
 .Knopf1:hover{
   border-radius: 5px;
   color: #1EAEDB;
@@ -19,6 +41,10 @@ body{
   background-color: white;
   height: 25px;
   font-weight: bold;
+}
+input {
+  display: block;
+  margin-top: 10px;
 }
 
 .Knopf1{
@@ -30,38 +56,59 @@ body{
   font-weight: bold;
   border: #1EAEDB solid 1px;
   margin-top: 20px;
+  margin-left: 40px;
+
+
+}
+.Nachricht{
+  margin-top: 100px;
+  text-align: center;
+}
+.imF{
   margin-left: auto;
   margin-right: auto;
+  transition: all 1s;
 }
 
+fieldset{
+    border: white solid 0px;
+    transition: all 1s;
+    margin-left: 0px;
+}
 .Tableüber{
   font-weight: bold;
 }
-
+.eingeben{
+  color:rgb(65,65,65);
+}
+.eingeben:focus{
+  color: rgb(30,30,30);
+}
 .Navigation{
   float: right;
   margin-top: 10px;
 }
 
 .Seitenheader{
-  font-size: 15px;
+  font-size: 22px;
   float: left;
   margin-top: 10px;
   margin-left: 20px;
 }
 
 .Navpunkt{
-  font-size: 12px;
+  px;
 }
 
 .tabelle{
-  margin-top: 75px;
+  margin-top: 23px;
   font-weight: lighter;
 }
 
 table{
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
 }
 
 .Tableunter{
@@ -74,8 +121,8 @@ table{
   padding-left: 20px;
   padding-right: 20px;
 }
-@media(max-width: 580px){
-  table{
+@media(max-width: 590px){
+  .tabelle{
     display: none;
   }
   .Navigation{
@@ -83,12 +130,15 @@ table{
   }
 }
 
-@media (min-width: 580px) {
+@media (min-width: 590px) {
   .Tableunter{
     padding-left:30px;
     padding-right: 30px;
     border-top: rgb(120,120,120) solid 0.3px;
   }
+  .Nachricht{
+    display: none;
+  }
   .Tableunter2{
     padding-left:30px;
     padding-right: 30px;
@@ -98,39 +148,49 @@ table{
     color: rgb(30,30,30)
   }
   .tabelle{
-    margin-top: 60px;
+    margin-top: 23px;
     font-weight: lighter;
     font-size: 15px;
-  }
+    display: block;
+    }
   .Navpunkt{
-    font-size: 12px;
+    font-size: 13.5px;
     padding-left: 10px;
   }
+  table{
+    padding-top: 7px;
+    display: inline-block;
+  }
+
 }
 
-@media (min-width: 680px) {
+@media (min-width: 660px) {
   .Tableunter{
     padding-left:33px;
     padding-right: 33px;
     border-top: rgb(120,120,120) solid 0.35px;
   }
+
   .Tableunter2{
     padding-left:33px;
     padding-right: 33px;
   }
-
+  .Nachricht{
+    display: none;
+  }
   .fa-rocket{
     color: rgb(30,30,30)
   }
   .tabelle{
-    margin-top: 68px;
+    margin-top: 23px;
     font-weight: lighter;
     font-size: 16px;
   }
   .Navpunkt{
-    font-size: 14px;
+    font-size: 13.5px;
     padding-left: 12px;
   }
+
 }
 
 @media (min-width: 750px) {
@@ -140,15 +200,25 @@ table{
     border-top: rgb(120,120,120) solid 0.3px;
     padding-top: 4px;
   }
+  .Nachricht{
+    display: none;
+  }
   .Tableunter2{
     padding-left:35px;
     padding-right: 35px;
   }
+  .Navpunkt{
+    font-size: 13.5px;
+    padding-left: 14px;
+  }
 
   .tabelle{
-    margin-top: 68px;
+    margin-top: 25px;
     font-weight: lighter;
     font-size: 18.5px;
+  }
+  table{
+    display: inline-block;
   }
 }
 
@@ -159,15 +229,28 @@ table{
     padding-top: 6px;
     border-top: rgb(120,120,120) solid 0.3px;
   }
+
   .Tableunter2{
     padding-left:37px;
     padding-right: 37px;
   }
-
+  .Navpunkt{
+    padding-left: 16px;
+    font-size: 13.5px;
+  }
+  .Nachricht{
+    display: none;
+  }
   .tabelle{
-    margin-top: 74px;
+    margin-top: 27px;
     font-weight: lighter;
     font-size: 20px;
+  }
+  table{
+    display: inline-block;
+  }
+  fieldset{
+    margin-left: 130px;
   }
 }
 
@@ -178,15 +261,25 @@ table{
     padding-top: 8px;
     border-top: rgb(120,120,120) solid 0.5px;
   }
+
   .Tableunter2{
     padding-left:39px;
     padding-right: 39px;
   }
-
+  .Nachricht{
+    display: none;
+  }
   .tabelle{
-    margin-top: 77px;
+    margin-top: 29px;
     font-weight: lighter;
     font-size: 22px;
+  }
+  .Navpunkt{
+    font-size: 13.5px;
+    padding-left: 18px;
+  }
+  table{
+    display: inline-block;
   }
 }
 
@@ -197,17 +290,26 @@ table{
     padding-top: 9.5px;
     border-top: rgb(120,120,120) solid 0.7px;
   }
+  .Navpunkt{
+    font-size: 13.5px;
+    padding-left: 20px;
+  }
   .Tableunter2{
     padding-left:41px;
     padding-right: 41px;
   }
+  .Nachricht{
+    display: none;
+  }
 
   .tabelle{
-    margin-top: 80px;
+    margin-top: 31px;
     font-weight: lighter;
     font-size: 24px;
   }
-}
+  table{
+    display: inline-block;
+  }
 
 @media (min-width: 1100px) {
   .Tableunter{
@@ -220,10 +322,22 @@ table{
     padding-left:43px;
     padding-right: 43px;
   }
-
+  .Nachricht{
+    display: none;
+  }
   .tabelle{
-    margin-top: 85px;
+    margin-top: 25px;
     font-weight: lighter;
     font-size: 26px;
+  }
+  .Navpunkt{
+    font-size: 13.5px;
+    padding-left: 22px;
+  }
+  table{
+    display: inline-block;
+  }
+  fieldset{
+    margin-left: 0px;
   }
 }
