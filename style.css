@@ -12,6 +12,32 @@ body{
   width: 100%
 }
 
+.Knopf1:hover{
+  border-radius: 5px;
+  color: #1EAEDB;
+  border: #1EAEDB solid 1px;
+  background-color: white;
+  height: 25px;
+  font-weight: bold;
+}
+
+.Knopf1{
+  color: white;
+  border-radius: 5px;
+  background-color: #1EAEDB;
+  transition: all 0.75s;
+  height: 25px;
+  font-weight: bold;
+  border: #1EAEDB solid 1px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Tableüber{
+  font-weight: bold;
+}
+
 .Navigation{
   float: right;
   margin-top: 10px;
@@ -145,21 +171,59 @@ table{
   }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 975px) {
   .Tableunter{
-    padding-left:37px;
-    padding-right: 37px;
-    padding-top: 6px;
-    border-top: rgb(120,120,120) solid 0.3px;
+    padding-left:39px;
+    padding-right: 39px;
+    padding-top: 8px;
+    border-top: rgb(120,120,120) solid 0.5px;
   }
   .Tableunter2{
-    padding-left:37px;
-    padding-right: 37px;
+    padding-left:39px;
+    padding-right: 39px;
   }
 
   .tabelle{
-    margin-top: 74px;
+    margin-top: 77px;
     font-weight: lighter;
-    font-size: 20px;
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 1030px) {
+  .Tableunter{
+    padding-left:41px;
+    padding-right: 41px;
+    padding-top: 9.5px;
+    border-top: rgb(120,120,120) solid 0.7px;
+  }
+  .Tableunter2{
+    padding-left:41px;
+    padding-right: 41px;
+  }
+
+  .tabelle{
+    margin-top: 80px;
+    font-weight: lighter;
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .Tableunter{
+    padding-left:42.5px;
+    padding-right: 42.5px;
+    padding-top: 10.5px;
+    border-top: rgb(120,120,120) solid 0.85px;
+  }
+  .Tableunter2{
+    padding-left:43px;
+    padding-right: 43px;
+  }
+
+  .tabelle{
+    margin-top: 85px;
+    font-weight: lighter;
+    font-size: 26px;
   }
 }
