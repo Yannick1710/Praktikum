@@ -1,65 +1,105 @@
 <!DOCTYPE html>
-  <html>
-    <head>
-      <title>Verwaltung Superhelden</title>
-      <link href="style.css" type="text/css" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
-      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-      <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
-      <link href="Skeleton/css/normalize.css" type="text/css" rel="stylesheet">
-      <link href="Skeleton/css/skeleton.css" type="text/css" rel="stylesheet">
+<html>
 
-      <meta charset="utf-8">
-    </head>
-    <body>
-      <header id="home" class="headbereich">
-        <div class="Überschrift"><i class="fa fa-rocket"></i> Superhelden <br /> Verwaltung</div>
-        <div class="Navigation">
-          <a href="#home" class="Link">Home</a>
-          <a href="#tabelle" class="Link">Tabelle</a>
-          <a href="#Hinzufügen" class="Link">Hinzufügen</a>
-          <a href="#Galerie" class="Link">Galerie</a>
-        </div>
-      </header>
-      <br />
-      <br />
-      <div id="tabelle" class="tabelle">
-        <div class="container">
-          <div class="row">
-            <div class="three columns"><span class="fett">Name</span></div>
-            <div class="three columns"><span class="fett">Alter</span></div>
-            <div class="three columns"><span class="fett">Superkraft</span></div>
-            <div class="three columns"><span class="fett">Film</span></div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="three columns"><span class="row1">Platzhalter</span></div>
-            <div class="three columns"><span class="row1">Platzhalter</span></div>
-            <div class="three columns"><span class="row1">Platzhalter</span></div>
-            <div class="three columns"><span class="row1">Platzhalter</span></div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="three columns"><span class="row2">Platzhalter</span></div>
-            <div class="three columns"><span class="row2">Platzhalter</span></div>
-            <div class="three columns"><span class="row2">Platzhalter</span></div>
-            <div class="three columns"><span class="row2">Platzhalter</span></div>
-          </div>
-        </div>
-      </div>
-      <div class="formbox">
-        <fieldset id="Hinzufügen" class="formular">
-          <input class="input" type="text" placeholder="Name"></input>
-          <input class="input" type="text" placeholder="Alter"></input>
-          <input class="input" type="text" placeholder="Superkraft"></input>
-          <input class="input" type="text" placeholder="Film"></input>
-          <input class="button-primary input button1" type="submit" value="Hinzufügen"></input>
-        </fieldset>
-      </div>
-      <div id="Galerie" class="helden">
-      </div>
+<head>
+  <title>Verwaltung Superhelden</title>
+  <link href="style.css" type="text/css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+    crossorigin="anonymous">
+  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+  <link href="Skeleton/css/normalize.css" type="text/css" rel="stylesheet">
+  <link href="Skeleton/css/skeleton.css" type="text/css" rel="stylesheet">
 
-    </body>
-  </html
+  <meta charset="utf-8">
+</head>
+
+<body>
+  <header id="home" class="headbereich">
+    <div class="Überschrift">
+      <i class="fa fa-rocket"></i> Superhelden
+      <br /> Verwaltung</div>
+    <div class="Navigation">
+      <a href="#home" class="Link">Home</a>
+      <a href="#tabelle" class="Link">Tabelle</a>
+      <a href="#Hinzufügen" class="Link">Hinzufügen</a>
+      <a href="#Galerie" class="Link">Galerie</a>
+    </div>
+  </header>
+  <br />
+  <br />
+  <div id="app">
+      {{ heroes }}
+
+    <div id="tabelle" class="tabelle">
+      <div class="container">
+        <div class="row">
+          <div class="three columns">
+            <span class="fett">Name</span>
+          </div>
+          <div class="three columns">
+            <span class="fett">Alter</span>
+          </div>
+          <div class="three columns">
+            <span class="fett">Superkraft</span>
+          </div>
+          <div class="three columns">
+            <span class="fett">Film</span>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="three columns">
+            <span class="row1">Platzhalter</span>
+          </div>
+          <div class="three columns">
+            <span class="row1">Platzhalter</span>
+          </div>
+          <div class="three columns">
+            <span class="row1">Platzhalter</span>
+          </div>
+          <div class="three columns">
+            <span class="row1">Platzhalter</span>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="three columns">
+            <span class="row2">Platzhalter</span>
+          </div>
+          <div class="three columns">
+            <span class="row2">Platzhalter</span>
+          </div>
+          <div class="three columns">
+            <span class="row2">Platzhalter</span>
+          </div>
+          <div class="three columns">
+            <span class="row2">Platzhalter</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="formbox">
+      <fieldset id="Hinzufügen" class="formular">
+        <input class="input" type="text" placeholder="Name"></input>
+        <input class="input" type="text" placeholder="Alter"></input>
+        <input class="input" type="text" placeholder="Superkraft"></input>
+        <input class="input" type="text" placeholder="Film"></input>
+        <input class="button-primary input button1" type="submit" value="Hinzufügen"></input>
+      </fieldset>
+    </div>
+    <div id="Galerie" class="helden">
+    </div>
+  </div>
+
+  <!-- Vue -->
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <!-- Firebase -->
+  <script src="https://gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+  <!-- VueFire -->
+  <script src="https://unpkg.com/vuefire/dist/vuefire.js"></script>
+  <script src="script.js"></script>
+</body>
+</html
