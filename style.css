@@ -2,6 +2,10 @@ body{
   font-family: 'Muli', sans-serif;
 }
 
+.fa-rocket{
+  color: rgb(30,30,30)
+}
+
 .header{
   height: 30px;
   background-color: rgba(255,255,255,30);
@@ -44,8 +48,16 @@ table{
   padding-left: 20px;
   padding-right: 20px;
 }
+@media(max-width: 580px){
+  table{
+    display: none;
+  }
+  .Navigation{
+    display: none;
+  }
+}
 
-@media (min-width: 550px) {
+@media (min-width: 580px) {
   .Tableunter{
     padding-left:30px;
     padding-right: 30px;
@@ -55,17 +67,99 @@ table{
     padding-left:30px;
     padding-right: 30px;
   }
+
+  .fa-rocket{
+    color: rgb(30,30,30)
+  }
   .tabelle{
-    margin-top: 75px;
+    margin-top: 60px;
     font-weight: lighter;
     font-size: 15px;
   }
-}
-@media(max-width: 450px){
-  table{
-    display: none;
+  .Navpunkt{
+    font-size: 12px;
+    padding-left: 10px;
   }
-  .Navigation{
-    display: none;
+}
+
+@media (min-width: 680px) {
+  .Tableunter{
+    padding-left:33px;
+    padding-right: 33px;
+    border-top: rgb(120,120,120) solid 0.35px;
+  }
+  .Tableunter2{
+    padding-left:33px;
+    padding-right: 33px;
+  }
+
+  .fa-rocket{
+    color: rgb(30,30,30)
+  }
+  .tabelle{
+    margin-top: 68px;
+    font-weight: lighter;
+    font-size: 16px;
+  }
+  .Navpunkt{
+    font-size: 14px;
+    padding-left: 12px;
+  }
+}
+
+@media (min-width: 750px) {
+  .Tableunter{
+    padding-left:35px;
+    padding-right: 35px;
+    border-top: rgb(120,120,120) solid 0.3px;
+    padding-top: 4px;
+  }
+  .Tableunter2{
+    padding-left:35px;
+    padding-right: 35px;
+  }
+
+  .tabelle{
+    margin-top: 68px;
+    font-weight: lighter;
+    font-size: 18.5px;
+  }
+}
+
+@media (min-width: 850px) {
+  .Tableunter{
+    padding-left:37px;
+    padding-right: 37px;
+    padding-top: 6px;
+    border-top: rgb(120,120,120) solid 0.3px;
+  }
+  .Tableunter2{
+    padding-left:37px;
+    padding-right: 37px;
+  }
+
+  .tabelle{
+    margin-top: 74px;
+    font-weight: lighter;
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .Tableunter{
+    padding-left:37px;
+    padding-right: 37px;
+    padding-top: 6px;
+    border-top: rgb(120,120,120) solid 0.3px;
+  }
+  .Tableunter2{
+    padding-left:37px;
+    padding-right: 37px;
+  }
+
+  .tabelle{
+    margin-top: 74px;
+    font-weight: lighter;
+    font-size: 20px;
   }
 }
