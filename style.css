@@ -1,3 +1,71 @@
-h1{
-  font-size: 50px;
+body{
+  font-family: 'Muli', sans-serif;
+}
+
+.header{
+  height: 30px;
+  background-color: rgba(255,255,255,30);
+  width: 100%
+}
+
+.Navigation{
+  float: right;
+  margin-top: 10px;
+}
+
+.Seitenheader{
+  font-size: 15px;
+  float: left;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.Navpunkt{
+  font-size: 12px;
+}
+
+.tabelle{
+  margin-top: 75px;
+  font-weight: lighter;
+}
+
+table{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Tableunter{
+  padding-left: 20px;
+  padding-right: 20px;
+  border-top: rgb(120,120,120) solid 0.1px;
+}
+
+.Tableunter2{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (min-width: 550px) {
+  .Tableunter{
+    padding-left:30px;
+    padding-right: 30px;
+    border-top: rgb(120,120,120) solid 0.3px;
+  }
+  .Tableunter2{
+    padding-left:30px;
+    padding-right: 30px;
+  }
+  .tabelle{
+    margin-top: 75px;
+    font-weight: lighter;
+    font-size: 15px;
+  }
+}
+@media(max-width: 450px){
+  table{
+    display: none;
+  }
+  .Navigation{
+    display: none;
+  }
 }
