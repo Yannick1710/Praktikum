@@ -1,4 +1,5 @@
 // Initialize Firebase
+
 var config = {
     apiKey: "AIzaSyDn0Yyl6uKpwZ7Zgpte9ErzdZAd3xwZCO0",
     authDomain: "hero-ced8d.firebaseapp.com",
@@ -9,7 +10,6 @@ var config = {
 };
 var firebaseApp = firebase.initializeApp(config);
 var db = firebaseApp.database();
-
 var vm = new Vue({
   el: '#app',
   firebase: {
@@ -20,5 +20,20 @@ var vm = new Vue({
         }
 
     }
-}
+  },
+
+
+  methods: {
+    addHero () {
+      this.$firebaseRefs.heroes.push({
+        name: this.name,
+        age: this.age,
+        strength: this.strength,
+        film: this.film
+
+      })
+    }
+  }
+
+
 })

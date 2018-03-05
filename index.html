@@ -64,13 +64,13 @@
       </div>
     </div>
     <div class="formbox">
-      <fieldset id="Hinzufügen" class="formular">
-        <input class="input" type="text" placeholder="Name"></input>
-        <input class="input" type="text" placeholder="Alter"></input>
-        <input class="input" type="text" placeholder="Superkraft"></input>
-        <input class="input" type="text" placeholder="Film"></input>
-        <input class="button-primary input button1" type="submit" value="Hinzufügen"></input>
-      </fieldset>
+      <form id="Hinzufügen" class="formular">
+        <input v-model="name" class="input" type="text" placeholder="Name"></input>
+        <input v-model="age"class="input" type="text" placeholder="Alter"></input>
+        <input v-model="strength" class="input" type="text" placeholder="Superkraft"></input>
+        <input v-model="film" class="input" type="text" placeholder="Film"></input>
+        <button @click="addHero" class="button-primary input button1">Hinzufügen</button>
+      </form>
     </div>
     <div id="Galerie" class="helden">
     </div>
