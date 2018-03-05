@@ -6,58 +6,60 @@
       <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
       <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
       <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+      <link href="Skeleton/css/normalize.css" type="text/css" rel="stylesheet">
+      <link href="Skeleton/css/skeleton.css" type="text/css" rel="stylesheet">
+
       <meta charset="utf-8">
     </head>
     <body>
-
-
-      <header id="headerr" class="header">
-        <h1 class="Seitenheader"><i class="fas fa-rocket"></i> Superhelden<br />Verwaltung</h1>
+      <header id="home" class="headbereich">
+        <div class="Überschrift"><i class="fa fa-rocket"></i> Superhelden <br /> Verwaltung</div>
         <div class="Navigation">
-          <a class="Navpunkt" href="#headerr">Home<a>
-          <a class="Navpunkt" href="#tablee">Filmtabelle<a>
-          <a class="Navpunkt" href="#hinzufügenn">Neuen Hinzufügen<a>
-          <a class="Navpunkt" href="#galerie">Galerie</a>
+          <a href="#home" class="Link">Home</a>
+          <a href="#tabelle" class="Link">Tabelle</a>
+          <a href="#Hinzufügen" class="Link">Hinzufügen</a>
+          <a href="#Galerie" class="Link">Galerie</a>
         </div>
       </header>
-
-      <h1 class="Nachricht">Display zu klein</h1>
-
-      <div id="tabellee" class="tabelle">
-        <table class="u-full-width">
-          <thead>
-            <tr>
-              <th class="Tableüber">Name</th>
-              <th class="Tableüber">Alter</th>
-              <th class="Tableüber">Superkraft</th>
-              <th class="Tableüber">Film</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="Tableunter">Platzhalter</td>
-              <td class="Tableunter">Platzhalter</td>
-              <td class="Tableunter">Platzhalter</td>
-              <td class="Tableunter">Platzhalter</td>
-            </tr>
-            <tr>
-              <td class="Tableunter2">Platzhalter</td>
-              <td class="Tableunter2">Platzhalter</td>
-              <td class="Tableunter2">Platzhalter</td>
-              <td class="Tableunter2">Platzhalter</td>
-            </tr>
-          </tbody>
-        <table>
+      <br />
+      <br />
+      <div id="tabelle" class="tabelle">
+        <div class="container">
+          <div class="row">
+            <div class="three columns"><span class="fett">Name</span></div>
+            <div class="three columns"><span class="fett">Alter</span></div>
+            <div class="three columns"><span class="fett">Superkraft</span></div>
+            <div class="three columns"><span class="fett">Film</span></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="three columns"><span class="row1">Platzhalter</span></div>
+            <div class="three columns"><span class="row1">Platzhalter</span></div>
+            <div class="three columns"><span class="row1">Platzhalter</span></div>
+            <div class="three columns"><span class="row1">Platzhalter</span></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="three columns"><span class="row2">Platzhalter</span></div>
+            <div class="three columns"><span class="row2">Platzhalter</span></div>
+            <div class="three columns"><span class="row2">Platzhalter</span></div>
+            <div class="three columns"><span class="row2">Platzhalter</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="formbox">
+        <fieldset id="Hinzufügen" class="formular">
+          <input class="input" type="text" placeholder="Name"></input>
+          <input class="input" type="text" placeholder="Alter"></input>
+          <input class="input" type="text" placeholder="Superkraft"></input>
+          <input class="input" type="text" placeholder="Film"></input>
+          <input class="button-primary input button1" type="submit" value="Hinzufügen"></input>
+        </fieldset>
+      </div>
+      <div id="Galerie" class="helden">
       </div>
 
-      <fieldset id="hinzufügenn" class="button">
-        <input type="submit" class="Knopf1 imF" value="Hinzufügen"></button>
-        <input class="eingeben imF" placeholder="Name" type="text"></input>
-        <input class="eingeben imF" placeholder="Alter" type="text"></input>
-        <input class="eingeben imF" placeholder="Superkraft" type="text"></input>
-        <input class="eingeben imF" placeholder="Film" type="text"></input>
-      </fieldset>
-      <div id="galerie" class="helden">
-      </div>
     </body>
-  </html>
+  </html
