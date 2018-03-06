@@ -10,6 +10,8 @@ var config = {
 };
 var firebaseApp = firebase.initializeApp(config);
 var db = firebaseApp.database();
+
+
 var vm = new Vue({
   el: '#app',
   firebase: {
@@ -21,7 +23,9 @@ var vm = new Vue({
 
     }
   },
-
+  data: {
+    showModal: false
+  },
 
   methods: {
     addHero () {
@@ -34,12 +38,35 @@ var vm = new Vue({
                                       })
 
               },
-
       deleteHero: function (hero) {
         console.log(hero);
         this.$firebaseRefs.heroes.child(hero['.key']).remove();
       },
-
   }
 
+});
+
+Vue.component('modal', {
+  template: '#modal-template',
+  props: ['hero'],
+  heroes: {
+      source: db.ref('heroes'),
+      readyCallback: function () {
+      }
+  },
+
+  methods: {
+    addHero () {
+      this.$firebaseRefs.heroes.push({
+        name: this.hero.name,
+        age: this.hero.age,
+        strength: this.hero.strength,
+        film: this.hero.film
+
+      })
+    },
+    updateHeroText: function (hero, newText) {
+        this.$firebaseRefs.child(hero['.key']).child('text').set(newText)
+    },
+  }
 })

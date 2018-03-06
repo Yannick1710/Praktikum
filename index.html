@@ -29,6 +29,15 @@
   <br />
   <br />
   <div id="app">
+    <!--<button id="show-modal" @click="showModal = true">Show Modal</button>
+     use the modal component, pass in the prop
+    <modal v-if="showModal" @close="showModal = false">
+
+      you can use custom content here to overwrite
+      default content
+
+      <h3 slot="header">Text bearbeiten</input></h3>
+    </modal> -->
     <div id="tabelle" class="tabelle">
       <div class="container">
         <div class="row">
@@ -58,7 +67,13 @@
             <p class="row1-3">{{ hero.strength }}</p>
           </div>
           <div class="three columns">
-            <p class="row1-4">{{ hero.film }} <span class="delete"><i v-on:click= "deleteHero(hero)" class="fas fa-trash-alt"> </i></span><span class="edit"> <i class="fas fa-edit"></i></span></p>
+            <p class="row1-4">{{ hero.film }} <span class="delete"><i v-on:click= "deleteHero(hero)" class="fas fa-trash-alt"> </i></span><i class="edit fas fa-edit" id="show-modal" @click="showModal = true" ></i></button></p>
+            <modal v-if="showModal" v-bind:hero="hero" @close="showModal = false">
+
+
+
+              <h3 slot="header">Text bearbeiten</input></h3>
+            </modal>
           </div>
         </div>
       </div>
@@ -82,9 +97,47 @@
   <script src="https://gstatic.com/firebasejs/4.0.0/firebase.js"></script>
   <!-- VueFire -->
   <script src="https://unpkg.com/vuefire/dist/vuefire.js"></script>
+  <!-- template for the modal component -->
   <script src="script.js"></script>
-  <script>
-    document.getElementById("row1-1").innerHTML = ;
+
+  <!-- template for the modal component -->
+  <script type="text/x-template" id="modal-template">
+    <transition name="modal">
+      <div class="modal-mask">
+        <div class="modal-wrapper">
+          <div class="modal-container">
+
+            <div class="modal-header">
+              <slot name="header">
+                Text bearbeiten
+              </slot>
+            </div>
+
+            <div class="modal-body">
+              <slot name="body">
+                <input type="text" v-model="hero.name" placeholder="Name"
+                @input="updateHeroText(hero, $event.target.value)"></input>
+                <input type="text" v-model="hero.age" placeholder="Alter"
+                @input="updateHeroText(hero, $event.target.value)"> </input>
+                <input type="text" v-model="hero.strength" placeholder="Superkraft"
+                @input="updateHeroText(hero, $event.target.value)"> </input>
+                <input type="text" v-model="hero.film" placeholder="Film"
+                @input="updateHeroText(hero, $event.target.value)"> </input>
+              </slot>
+            </div>
+
+            <div class="modal-footer">
+              <slot name="footer">
+                Text eingeben
+                <button class="modal-default-button" @click="$emit('close');" >
+                  Bearbeiten
+                </button>
+              </slot>
+            </div>
+          </div>
+        </div>
+      </div>
+    </transition>
   </script>
 </body>
 </html
