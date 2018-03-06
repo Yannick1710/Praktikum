@@ -71,6 +71,16 @@ span{
   text-align: center;
 }
 
+.delete:hover{
+  color: rgb(240,0,0);
+  cursor: pointer;
+}
+
+.edit:hover{
+  color: rgb(0,0,240);
+  cursor: pointer;
+}
+
 .fett{
   font-weight: bold;
 }

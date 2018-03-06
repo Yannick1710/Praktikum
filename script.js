@@ -31,9 +31,15 @@ var vm = new Vue({
         strength: this.strength,
         film: this.film
 
-      })
-    }
-  }
+                                      })
 
+              },
+
+      deleteHero: function (hero) {
+        console.log(hero);
+        this.$firebaseRefs.heroes.child(hero['.key']).remove();
+      },
+
+  }
 
 })

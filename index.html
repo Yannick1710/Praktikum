@@ -58,7 +58,7 @@
             <p class="row1-3">{{ hero.strength }}</p>
           </div>
           <div class="three columns">
-            <p class="row1-4">{{ hero.film }}</p>
+            <p class="row1-4">{{ hero.film }} <span class="delete"><i v-on:click= "deleteHero(hero)" class="fas fa-trash-alt"> </i></span><span class="edit"> <i class="fas fa-edit"></i></span></p>
           </div>
         </div>
       </div>
